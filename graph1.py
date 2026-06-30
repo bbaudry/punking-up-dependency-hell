@@ -24,9 +24,9 @@ x_npm = range(1, len(npm_downloads) + 1)
 x_pypi = range(1, len(pypi_downloads) + 1)
 x_cargo = range(1, len(cargo_downloads) + 1)
 
-ax.plot(x_npm, npm_downloads, color=pink, linewidth=1.5)
-ax.plot(x_pypi, pypi_downloads, color=pink, linewidth=1.5, linestyle="--")
-ax.plot(x_cargo, cargo_downloads, color=pink, linewidth=1.5, linestyle=":")
+ax.plot(x_npm, npm_downloads, color=pink, linewidth=1.7)
+ax.plot(x_pypi, pypi_downloads, color=pink, linewidth=1.7, linestyle="--")
+ax.plot(x_cargo, cargo_downloads, color=pink, linewidth=1.7, linestyle=":")
 
 label_x = 500
 ax.text(label_x, npm_downloads[label_x - 1] * 0.9, "npm",
@@ -44,8 +44,8 @@ ax.yaxis.set_major_formatter(ticker.FuncFormatter(
     lambda x, _: f"{x / 1e9:.2f}B" if x >= 1e9 else f"{x / 1e6:.0f}M"))
 ax.set_ylim(bottom=0)
 
-ax.set_xticks([])
-ax.tick_params(axis="x", which="both", bottom=False)
+ax.set_xticks([1, 500])
+ax.tick_params(axis="x", which="both", bottom=True, colors="white")
 
 ax.tick_params(colors="white", which="major")
 ax.spines["bottom"].set_color("white")

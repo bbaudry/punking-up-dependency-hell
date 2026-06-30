@@ -55,7 +55,7 @@ ax.set_xlim(0, 100)
 ax.set_xticks([0, 25, 50, 75, 100])
 ax.set_xticklabels(["0%", "25%", "50%", "75%", "100%"], color="white", fontsize=11)
 
-ax.set_xlabel("Percentage of occurrence", color="white", fontsize=13)
+# ax.set_xlabel("Percentage of occurrence", color="white", fontsize=13)
 ax.set_ylabel("Dependency type", color="white", fontsize=13)
 
 ax.tick_params(colors="white", which="both")
